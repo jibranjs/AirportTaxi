@@ -2,12 +2,23 @@
 import Card from 'primevue/card'
 import Button from 'primevue/button'
 import InputText from 'primevue/inputtext'
+import DataTable from 'primevue/datatable'
+import Column from 'primevue/column'
 import { Icon } from '@iconify/vue'
+import { ref } from 'vue'
+
+const products = ref([
+  { id: 1, name: 'Laptop Pro', category: 'Electronics', price: 1299, status: 'In Stock' },
+  { id: 2, name: 'Wireless Mouse', category: 'Accessories', price: 49, status: 'Low Stock' },
+  { id: 3, name: 'Gaming Monitor', category: 'Electronics', price: 599, status: 'Out of Stock' },
+  { id: 4, name: 'Mechanical Keyboard', category: 'Accessories', price: 159, status: 'In Stock' },
+  { id: 5, name: 'USB-C Hub', category: 'Accessories', price: 79, status: 'In Stock' },
+])
 </script>
 
 <template>
-  <div class="max-w-7xl mx-auto p-4">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+  <div class="!space-y-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       <!-- Stats Cards -->
       <Card class="shadow-sm">
         <template #title>
@@ -59,7 +70,7 @@ import { Icon } from '@iconify/vue'
     </div>
 
     <!-- PrimeVue Components Demo -->
-    <Card class="!mt-4 shadow-sm">
+    <Card class="shadow-sm">
       <template #title>
         <div class="flex items-center gap-2">
           <Icon icon="mdi:puzzle" class="text-xl" />
@@ -87,7 +98,7 @@ import { Icon } from '@iconify/vue'
     </Card>
 
     <!-- PrimeVue + Iconify Integration -->
-    <Card class="!mt-4 shadow-sm">
+    <Card class="shadow-sm">
       <template #title>
         <div class="flex items-center gap-2">
           <Icon icon="mdi:puzzle-plus" class="text-xl" />
@@ -117,7 +128,7 @@ import { Icon } from '@iconify/vue'
     </Card>
 
     <!-- Vue-related Icons -->
-    <Card class="!mt-4 shadow-sm">
+    <Card class="shadow-sm">
       <template #title>
         <div class="flex items-center gap-2">
           <Icon icon="mdi:information" class="text-xl" />
@@ -156,13 +167,41 @@ import { Icon } from '@iconify/vue'
         </p>
       </template>
     </Card>
+
+    <!-- Product Table -->
+    <Card class="shadow-sm">
+      <template #title>
+        <div class="flex items-center gap-2">
+          <Icon icon="mdi:table" class="text-xl" />
+          <span>Product Inventory</span>
+        </div>
+      </template>
+      <template #content>
+        <DataTable :value="products" stripedRows>
+          <Column field="id" header="ID" sortable></Column>
+          <Column field="name" header="Name" sortable></Column>
+          <Column field="category" header="Category" sortable></Column>
+          <Column field="price" header="Price" sortable>
+            <template #body="slotProps">
+              ${{ slotProps.data.price }}
+            </template>
+          </Column>
+          <Column field="status" header="Status" sortable>
+            <template #body="slotProps">
+              <span :class="{
+                'bg-green-100 text-green-700': slotProps.data.status === 'In Stock',
+                'bg-yellow-100 text-yellow-700': slotProps.data.status === 'Low Stock',
+                'bg-red-100 text-red-700': slotProps.data.status === 'Out of Stock'
+              }" class="px-2 py-1 rounded-full text-sm">
+                {{ slotProps.data.status }}
+              </span>
+            </template>
+          </Column>
+        </DataTable>
+      </template>
+    </Card>
   </div>
 </template>
 
 <style scoped>
-.home-view {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
 </style>

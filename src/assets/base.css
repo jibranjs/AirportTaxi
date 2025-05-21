@@ -2,7 +2,8 @@
 :root {
   --primary-color: #2c3e50;
   --text-color: #333333;
-  --background-color: #ededed;
+  --background-color: #f8f9fa;
+  --sidebar-width: 256px;
 }
 
 /* Reset and base styles */
@@ -12,6 +13,13 @@
   box-sizing: border-box;
   margin: 0;
   font-weight: normal;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -33,4 +41,5 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
