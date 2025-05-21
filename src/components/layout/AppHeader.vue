@@ -28,8 +28,8 @@ const items = ref([
         Vuejs3 Skeleton <span class="text-sm text-primary font-normal">by iotexpert</span>
       </h1>
       <div class="flex-grow-1"></div>
-      <span class="text-sm text-500 font-semibold">v1.0</span>
+      <span class="text-sm text-500 font-semibold">v1.1</span>
     </div>
-    <Menubar :model="items" class="border-none surface-0 !mt-2" />
+    <Menubar :model="items" class="border-none !mt-2" />
   </header>
 </template>

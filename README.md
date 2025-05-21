@@ -1,4 +1,4 @@
-# Vuejs3 Skeleton v1.0
+# Vuejs3 Skeleton v1.1
 
 A modern Vue.js 3 starter template with PrimeVue 4 integration.
 

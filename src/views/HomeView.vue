@@ -12,7 +12,7 @@ import { Icon } from '@iconify/vue'
       <Card class="shadow-sm">
         <template #title>
           <div class="flex items-center gap-2">
-            <Icon icon="mdi:account-group" class="text-primary text-xl" />
+            <Icon icon="mdi:account-group" class="text-xl" />
             <span>Users</span>
           </div>
         </template>
@@ -24,7 +24,7 @@ import { Icon } from '@iconify/vue'
       <Card class="shadow-sm">
         <template #title>
           <div class="flex items-center gap-2">
-            <Icon icon="mdi:chart-line" class="text-primary text-xl" />
+            <Icon icon="mdi:chart-line" class="text-xl" />
             <span>Revenue</span>
           </div>
         </template>
@@ -36,7 +36,7 @@ import { Icon } from '@iconify/vue'
       <Card class="shadow-sm">
         <template #title>
           <div class="flex items-center gap-2">
-            <Icon icon="mdi:shopping" class="text-primary text-xl" />
+            <Icon icon="mdi:shopping" class="text-xl" />
             <span>Orders</span>
           </div>
         </template>
@@ -48,7 +48,7 @@ import { Icon } from '@iconify/vue'
       <Card class="shadow-sm">
         <template #title>
           <div class="flex items-center gap-2">
-            <Icon icon="mdi:trending-up" class="text-primary text-xl" />
+            <Icon icon="mdi:trending-up" class="text-xl" />
             <span>Growth</span>
           </div>
         </template>
@@ -62,7 +62,7 @@ import { Icon } from '@iconify/vue'
     <Card class="!mt-4 shadow-sm">
       <template #title>
         <div class="flex items-center gap-2">
-          <Icon icon="mdi:puzzle" class="text-primary text-xl" />
+          <Icon icon="mdi:puzzle" class="text-xl" />
           <span>PrimeVue Components</span>
         </div>
       </template>
@@ -90,7 +90,7 @@ import { Icon } from '@iconify/vue'
     <Card class="!mt-4 shadow-sm">
       <template #title>
         <div class="flex items-center gap-2">
-          <Icon icon="mdi:puzzle-plus" class="text-primary text-xl" />
+          <Icon icon="mdi:puzzle-plus" class="text-xl" />
           <span>PrimeVue + Iconify Integration</span>
         </div>
       </template>
@@ -120,7 +120,7 @@ import { Icon } from '@iconify/vue'
     <Card class="!mt-4 shadow-sm">
       <template #title>
         <div class="flex items-center gap-2">
-          <Icon icon="mdi:information" class="text-primary text-xl" />
+          <Icon icon="mdi:information" class="text-xl" />
           <span>Iconify Icons</span>
         </div>
       </template>
@@ -148,7 +148,7 @@ import { Icon } from '@iconify/vue'
           <a
             href="https://icon-sets.iconify.design"
             target="_blank"
-            class="text-primary hover:underline"
+            class="hover:underline"
           >
             Browse all icons
             <Icon icon="mdi:external-link" class="inline" />
